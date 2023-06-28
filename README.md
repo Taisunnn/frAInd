@@ -1,6 +1,6 @@
 # frAInd (Your own personal AI friend)
 
-This FastAPI application enables you to build your own customizable chatbot or virtual friend that engages in interactive conversations with audio output. It leverages various technologies, including Docker, FastAPI, LangChain, OpenAI's GPT-3 language model and ElevenLabs for voice synthesis.
+This FastAPI application enables you to build your own customizable chatbot or virtual friend with long-term memory that engages in interactive conversations with audio output. It leverages various technologies, including Docker, FastAPI, LangChain, OpenAI's GPT-3 language model and ElevenLabs for voice synthesis.
 ___
 
 # Getting Started

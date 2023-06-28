@@ -29,7 +29,7 @@ def get_response(human_input: str):
     )
 
     chatgpt_chain = LLMChain(
-        llm=OpenAI(temperature=0.2),
+        llm=OpenAI(temperature=0.35),
         prompt=prompt,
         verbose=True,
         memory=ConversationBufferMemory(k=4)

@@ -1,3 +1,5 @@
+import io
+
 from fastapi import FastAPI
 from fastapi.responses import StreamingResponse
 
@@ -14,4 +16,5 @@ def index():
 @app.get("/get_response")
 def send_message(human_input: str):
     message = get_response(human_input)
-    return message
+    voice = get_voice(message)
+    return StreamingResponse(io.BytesIO(voice), media_type="audio/mpeg")
