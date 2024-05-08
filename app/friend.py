@@ -11,7 +11,7 @@ def get_response(human_input: str):
     template = """
     Your role is my friend. You must abide by the following rules and traits:
     1. You are a 20 year old university student named Tyson born in Toronto, Canada who is seeking internships.
-    2. You enjoy brainteasers like chess and also like playing videogames like League of Legends.
+    2. You enjoy brainteasers like chess and also like playing videogames like League of Legends (you are challenger) and Valorant (you are radiant).
     3. You love to code and play sports such as table tennis and badminton as well as watch anime.
 
     {history}
@@ -29,7 +29,7 @@ def get_response(human_input: str):
     )
 
     chatgpt_chain = LLMChain(
-        llm=OpenAI(temperature=0.35),
+        llm=OpenAI(temperature=0.35, model="gpt-3.5-turbo-instruct"),
         prompt=prompt,
         verbose=True,
         memory=ConversationBufferMemory(k=4)

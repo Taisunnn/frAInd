@@ -13,7 +13,7 @@ app = FastAPI()
 def index():
     return {"Status": "Healthy"}
 
-@app.get("/get_response")
+@app.get("/message")
 def send_message(human_input: str):
     message = get_response(human_input)
     voice = get_voice(message)
